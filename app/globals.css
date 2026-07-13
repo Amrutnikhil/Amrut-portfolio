@@ -1,18 +1,12 @@
 @import 'tailwindcss';
 @import 'shadcn/tailwind.css';
 
-@theme inline {
-  --color-accent: #00D4FF;
-}
-
 :root {
   color-scheme: dark;
   --background: #050505;
   --foreground: #FFFFFF;
   --card: #111111;
   --card-foreground: #FFFFFF;
-  --popover: #111111;
-  --popover-foreground: #FFFFFF;
   --primary: #00D4FF;
   --primary-foreground: #050505;
   --secondary: #1a1a1a;
@@ -21,19 +15,12 @@
   --muted-foreground: #999999;
   --accent: #00D4FF;
   --accent-foreground: #050505;
-  --destructive: #ff4d4f;
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.05);
   --ring: #00D4FF;
 }
 
-.dark {
-  color-scheme: dark;
-}
-
 @layer base {
-  * {
-  }
   html {
     @apply bg-[#050505];
   }
@@ -49,12 +36,16 @@
     @apply py-20 md:py-32 px-4 sm:px-6 md:px-8 lg:px-12;
   }
 
+  .section-max {
+    @apply max-w-7xl mx-auto;
+  }
+
   .section-label {
-    @apply text-xs uppercase tracking-widest text-[#00D4FF];
+    @apply text-[#00D4FF] text-sm tracking-widest uppercase;
   }
 
   .section-heading {
-    @apply text-4xl md:text-5xl font-bold text-white mt-4;
+    @apply text-4xl md:text-5xl font-bold mt-2 mb-12 text-white;
   }
 
   .card-base {
@@ -65,16 +56,13 @@
     @apply transition-all duration-200 hover:border-[#00D4FF]/30 hover:-translate-y-1;
   }
 
-  .btn-primary {
-    @apply bg-[#00D4FF] text-black font-semibold rounded-lg px-6 py-3 transition-all duration-200 hover:shadow-lg hover:shadow-[#00D4FF]/30;
+  .tech-badge {
+    @apply bg-white/5 border border-white/10 rounded-lg px-3 py-1.5 text-xs text-gray-300;
   }
 
-  .btn-secondary {
-    @apply border border-white/20 text-white rounded-lg px-6 py-3 transition-all duration-200 hover:border-white/40 hover:bg-white/5;
-  }
-
-  .badge {
-    @apply bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-gray-300 transition-all duration-200 hover:border-[#00D4FF]/30;
+  .fade-in-up {
+    @apply opacity-0;
+    animation: fadeInUp 0.6s ease-out forwards;
   }
 }
 
@@ -87,8 +75,4 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
 }

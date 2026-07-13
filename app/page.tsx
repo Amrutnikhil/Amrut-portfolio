@@ -1,12 +1,12 @@
 import Navbar from '@/components/navbar';
 import Hero from '@/components/hero';
-import About from '@/components/about';
-import Experience from '@/components/experience';
-import Projects from '@/components/projects';
-import Skills from '@/components/skills';
-import Certifications from '@/components/certifications';
-import Education from '@/components/education';
-import Contact from '@/components/contact';
+import AboutSection from '@/components/about-section';
+import ExperienceSection from '@/components/experience-section';
+import ProjectsSection from '@/components/projects-section';
+import SkillsSection from '@/components/skills-section';
+import CertificationsSection from '@/components/certifications-section';
+import EducationSection from '@/components/education-section';
+import ContactSection from '@/components/contact-section';
 import Footer from '@/components/footer';
 
 export default function Home() {
@@ -14,13 +14,13 @@ export default function Home() {
     <main className="bg-[#050505] min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Certifications />
-      <Education />
-      <Contact />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <CertificationsSection />
+      <EducationSection />
+      <ContactSection />
       <Footer />
     </main>
   );
