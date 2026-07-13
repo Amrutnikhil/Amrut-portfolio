@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { GitBranch, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
@@ -20,8 +19,6 @@ const projects = [
       'C++',
       'Motor Control',
     ],
-    github: 'https://github.com',
-    demo: '#',
   },
   {
     id: 2,
@@ -37,8 +34,6 @@ const projects = [
       'UAV',
       'Image Processing',
     ],
-    github: 'https://github.com',
-    demo: '#',
   },
   {
     id: 3,
@@ -54,8 +49,6 @@ const projects = [
       'Machine Learning',
       'FastAPI',
     ],
-    github: 'https://github.com',
-    demo: '#',
   },
   {
     id: 4,
@@ -71,8 +64,6 @@ const projects = [
       'Arduino',
       'Rapid Prototyping',
     ],
-    github: 'https://github.com',
-    demo: '#',
   },
   {
     id: 5,
@@ -81,8 +72,6 @@ const projects = [
     description:
       'Interactive Power BI dashboard analyzing sales performance, customer trends, and product insights. Built with SQL data modeling, DAX measures, KPI cards, and dynamic visualizations including geographic mapping and slicer filters.',
     technologies: ['Power BI', 'SQL', 'DAX', 'Data Analytics', 'SSMS', 'Excel'],
-    github: 'https://github.com',
-    demo: '#',
   },
   {
     id: 6,
@@ -98,8 +87,6 @@ const projects = [
       'Wireframing',
       'Prototyping',
     ],
-    github: 'https://github.com',
-    demo: '#',
   },
 ];
 
@@ -148,24 +135,6 @@ export default function Projects() {
                       {tech}
                     </span>
                   ))}
-                </div>
-
-                {/* Buttons */}
-                <div className="flex gap-3 mt-6">
-                  <a
-                    href={project.github}
-                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white text-sm hover:border-[#00D4FF]/30 hover:bg-white/10 transition-all duration-200"
-                  >
-                    <GitBranch size={16} />
-                    <span>Code</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white text-sm hover:border-[#00D4FF]/30 hover:bg-white/10 transition-all duration-200"
-                  >
-                    <ExternalLink size={16} />
-                    <span>Demo</span>
-                  </a>
                 </div>
               </div>
             </motion.div>
