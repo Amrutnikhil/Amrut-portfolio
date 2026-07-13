@@ -5,17 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-electric-blue: #00D4FF;
-  --color-electric-blue-dark: #0098B2;
-  --color-black: #050505;
-  --color-dark-gray: #111111;
-  --color-white: #FFFFFF;
-  --color-gray-800: #1a1a1a;
-  --color-gray-700: #252525;
-  --color-gray-600: #333333;
   --color-accent: #00D4FF;
-  --color-accent-dark: #00A8CC;
-  
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -168,93 +158,72 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply bg-background;
+    @apply bg-[#050505];
   }
   body {
-    @apply bg-background text-foreground;
-    cursor: none;
+    @apply bg-[#050505] text-white;
+    scroll-behavior: smooth;
   }
 }
 
 @layer utilities {
-  .glow-electric {
-    @apply text-electric-blue drop-shadow-[0_0_15px_rgba(0,212,255,0.4)];
+  .section-padding {
+    @apply py-20 md:py-32 px-4 sm:px-6 md:px-8;
   }
-  
-  .glow-box {
-    @apply border border-electric-blue/30 shadow-[0_0_20px_rgba(0,212,255,0.2)];
+
+  .section-divider {
+    @apply border-t border-white/5;
   }
-  
-  .glow-box-hover {
-    @apply transition-all duration-300 hover:border-electric-blue/60 hover:shadow-[0_0_30px_rgba(0,212,255,0.4)];
+
+  .section-label {
+    @apply text-xs uppercase tracking-widest text-[#00D4FF];
   }
-  
-  .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-white mt-4;
   }
-  
-  .glass-dark {
-    @apply bg-black/20 backdrop-blur-xl border border-white/5;
+
+  .card-base {
+    @apply bg-[#111111] border border-white/10 rounded-xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:border-white/30 hover:-translate-y-1;
+  }
+
+  .btn-primary {
+    @apply bg-[#00D4FF] text-black font-semibold rounded-lg px-6 py-3 transition-all duration-200 hover:shadow-lg hover:shadow-[#00D4FF]/30;
+  }
+
+  .btn-secondary {
+    @apply border border-white/20 text-white rounded-lg px-6 py-3 transition-all duration-200 hover:border-white/40 hover:bg-white/5;
+  }
+
+  .badge-accent {
+    @apply border border-[#00D4FF]/30 bg-[#00D4FF]/5 text-[#00D4FF] text-xs px-3 py-1 rounded-full;
+  }
+
+  .text-secondary {
+    @apply text-gray-400;
+  }
+
+  .fade-in-up {
+    @apply animate-in fade-in-0 slide-in-from-bottom-4 duration-500;
   }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+/* Subtle scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 15px rgba(0, 212, 255, 0.3); }
-  50% { box-shadow: 0 0 25px rgba(0, 212, 255, 0.6); }
-}
-
-@keyframes scan-line {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
-}
-
-@keyframes grid-fade {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-  100% { opacity: 0.3; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
-}
-
-@keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
-  100% { transform: translate(0); }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.animate-scan-line {
-  animation: scan-line 3s ease-in-out infinite;
-}
-
-.animate-grid-fade {
-  animation: grid-fade 4s ease-in-out infinite;
-}
-
-.animate-shimmer {
-  background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  background-size: 200px 100%;
-  animation: shimmer 3s infinite;
-}
-
-.animate-glitch {
-  animation: glitch 0.3s ease-in-out;
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
 }

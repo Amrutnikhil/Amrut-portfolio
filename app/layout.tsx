@@ -3,23 +3,34 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Robotics Engineer | Embedded Systems | Product Development',
-  description: 'Premium portfolio of a Robotics Engineer specializing in embedded systems, computer vision, autonomous navigation, and product development. L&T funded research, ROS2 development, and AI integration.',
-  keywords: ['Robotics Engineer', 'Embedded Systems', 'ROS2', 'Computer Vision', 'Autonomous Systems', 'Product Development', 'Jetson Nano', 'Mechanical Design'],
+  title: 'Amrut B Nargund | Robotics & Embedded Systems Engineer',
+  description: 'Portfolio of Amrut B Nargund — Robotics and Embedded Systems Engineer specializing in ROS, autonomous systems, mechanical design, computer vision, and product development. PES University, Bengaluru.',
+  keywords: [
+    'Amrut B Nargund',
+    'Robotics Engineer',
+    'Embedded Systems Engineer',
+    'ROS Developer',
+    'Product Development',
+    'Computer Vision',
+    'Jetson Nano',
+    'PES University',
+    'CAD Design',
+    'Mechanical Design',
+  ],
   generator: 'Next.js 15',
-  creator: 'Robotics Engineer',
+  creator: 'Amrut B Nargund',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yourportfolio.com',
-    title: 'Robotics Engineer | Embedded Systems Expert',
-    description: 'Designing Intelligent Robotics Systems - Portfolio of advanced robotics projects and embedded systems work',
-    siteName: 'Robotics Portfolio',
+    url: 'https://amrut.dev',
+    title: 'Amrut B Nargund | Robotics & Embedded Systems Engineer',
+    description: 'Portfolio of a Robotics and Embedded Systems Engineer specializing in ROS, autonomous systems, and mechanical design',
+    siteName: 'Amrut Nargund',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Robotics Engineer | Embedded Systems',
-    description: 'Designing Intelligent Robotics Systems',
+    title: 'Amrut B Nargund | Robotics Engineer',
+    description: 'Robotics and Embedded Systems Engineer | Product Development | Computer Vision',
   },
   icons: {
     icon: [
@@ -54,12 +65,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark bg-background scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="antialiased bg-background text-foreground overflow-x-hidden">
+      <body className="antialiased bg-[#050505] text-white overflow-x-hidden">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
