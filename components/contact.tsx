@@ -74,12 +74,16 @@ export default function Contact() {
           </div>
 
           {/* Download Resume Button */}
-          <a
-            href="/resume.pdf"
-            className="btn-primary w-full text-center block"
+          <button
+            onClick={() => window.open(
+              'https://drive.google.com/drive/folders/1vc-vhRX9BVHtz8U8b_1OofTYFgzkw3tc?usp=sharing',
+              '_blank',
+              'noopener,noreferrer'
+            )}
+            className="btn-primary w-full text-center block cursor-pointer"
           >
             Download Resume
-          </a>
+          </button>
         </motion.div>
       </div>
     </section>

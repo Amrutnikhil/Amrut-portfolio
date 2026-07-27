@@ -94,17 +94,21 @@ const ContactSection = () => {
           </motion.div>
 
           {/* Download Resume Button */}
-          <motion.a
-            href="/resume.pdf"
+          <motion.button
+            onClick={() => window.open(
+              'https://drive.google.com/drive/folders/1vc-vhRX9BVHtz8U8b_1OofTYFgzkw3tc?usp=sharing',
+              '_blank',
+              'noopener,noreferrer'
+            )}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full bg-[#00D4FF] text-black font-semibold rounded-lg px-8 py-3 hover:bg-[#00D4FF]/90 transition-all duration-200 flex items-center justify-center gap-2 inline-flex mt-4"
+            className="w-full bg-[#00D4FF] text-black font-semibold rounded-lg px-8 py-3 hover:bg-[#00D4FF]/90 transition-all duration-200 flex items-center justify-center gap-2 mt-4 cursor-pointer"
           >
             <Download size={18} />
             Download Resume
-          </motion.a>
+          </motion.button>
         </motion.div>
       </div>
     </section>
