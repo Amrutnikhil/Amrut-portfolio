@@ -58,12 +58,16 @@ export default function Hero() {
           >
             View Projects
           </a>
-          <a
-            href="/resumes"
-            className="border border-white/20 text-white font-semibold rounded-lg px-6 py-3 hover:border-white/40 hover:bg-white/5 transition-all duration-200 inline-block"
+          <button
+            onClick={() => window.open(
+              'https://drive.google.com/drive/folders/1vc-vhRX9BVHtz8U8b_1OofTYFgzkw3tc?usp=sharing',
+              '_blank',
+              'noopener,noreferrer'
+            )}
+            className="border border-white/20 text-white font-semibold rounded-lg px-6 py-3 hover:border-white/40 hover:bg-white/5 transition-all duration-200 inline-block cursor-pointer"
           >
             Download Resume
-          </a>
+          </button>
           <a
             href="#contact"
             className="border border-white/20 text-white font-semibold rounded-lg px-6 py-3 hover:border-white/40 hover:bg-white/5 transition-all duration-200 inline-block"
