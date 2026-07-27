@@ -1,11 +1,4 @@
-export type IconType =
-  | 'brain'
-  | 'cpu'
-  | 'zap'
-  | 'barchart'
-  | 'target'
-  | 'palette'
-  | 'wrench'
+export type IconType = 'brain' | 'cpu' | 'zap' | 'barchart' | 'target' | 'palette' | 'wrench'
 
 export interface Resume {
   id: string
@@ -15,6 +8,7 @@ export interface Resume {
   fileName: string
   iconType: IconType
   featured?: boolean
+  updatedDate?: string
 }
 
 export const resumeData: Resume[] = [
@@ -24,18 +18,20 @@ export const resumeData: Resume[] = [
     description:
       'Machine Learning, Deep Learning, Computer Vision, LLMs, RAG, Agentic AI, Python, AI Engineering.',
     tags: ['AI', 'Machine Learning', 'LLM', 'RAG', 'Python', 'Deep Learning'],
-    fileName: 'Amrut_B_Nargund(CS).pdf',
+    fileName: 'ai-ml.pdf',
     iconType: 'brain',
     featured: true,
+    updatedDate: 'Dec 2024',
   },
   {
     id: 'ece',
-    title: 'Electronics & Communication (ECE)',
+    title: 'Electronics & Embedded (ECE)',
     description:
-      'Embedded Systems, STM32, Digital Electronics, PCB Design, Microcontrollers, Electronics Engineering.',
+      'Embedded Systems, STM32, Digital Electronics, Microcontrollers, PCB Design, Electronics Engineering.',
     tags: ['STM32', 'Embedded C', 'PCB', 'Electronics', 'Microcontrollers'],
-    fileName: 'Amrut_B_Nargund(EC).pdf',
+    fileName: 'ece.pdf',
     iconType: 'cpu',
+    updatedDate: 'Nov 2024',
   },
   {
     id: 'robotics',
@@ -43,17 +39,19 @@ export const resumeData: Resume[] = [
     description:
       'ROS2, SLAM, LiDAR, Sensor Fusion, Computer Vision, Autonomous Systems, Robotics Software.',
     tags: ['ROS2', 'SLAM', 'LiDAR', 'Robotics', 'Sensor Fusion'],
-    fileName: 'Amrut_B_Nargund(Robotics).pdf',
+    fileName: 'robotics.pdf',
     iconType: 'zap',
+    updatedDate: 'Dec 2024',
   },
   {
     id: 'data-analyst',
     title: 'Data Analyst / Business Analyst',
     description:
-      'SQL, Python, Power BI, Excel, Data Visualisation, Business Intelligence, Dashboards.',
+      'SQL, Python, Power BI, Excel, Data Visualisation, Analytics, Business Intelligence, Dashboards.',
     tags: ['SQL', 'Power BI', 'Python', 'Excel', 'Analytics'],
-    fileName: 'Amrut_B_Nargund(DA_BA).pdf',
+    fileName: 'data-analyst.pdf',
     iconType: 'barchart',
+    updatedDate: 'Nov 2024',
   },
   {
     id: 'product-manager',
@@ -61,8 +59,9 @@ export const resumeData: Resume[] = [
     description:
       'Product Strategy, Roadmaps, User Research, Product Analytics, Agile, Cross-functional Collaboration.',
     tags: ['Product', 'Strategy', 'Analytics', 'Agile', 'Research'],
-    fileName: 'Amrut_B_Nargund(PM).pdf',
+    fileName: 'product-manager.pdf',
     iconType: 'target',
+    updatedDate: 'Nov 2024',
   },
   {
     id: 'ui-ux',
@@ -70,8 +69,9 @@ export const resumeData: Resume[] = [
     description:
       'User Experience, User Interface Design, Wireframing, Prototyping, Design Systems, Figma.',
     tags: ['UI', 'UX', 'Figma', 'Design', 'Prototype'],
-    fileName: 'Amrut_B_Nargund(UIUX).pdf',
+    fileName: 'ui-ux.pdf',
     iconType: 'palette',
+    updatedDate: 'Oct 2024',
   },
   {
     id: 'mechanical',
@@ -79,7 +79,11 @@ export const resumeData: Resume[] = [
     description:
       'CAD Design, SolidWorks, Fusion 360, Mechanical Design, Manufacturing, Product Development.',
     tags: ['CAD', 'SolidWorks', 'Fusion 360', 'Mechanical', 'Design'],
-    fileName: 'Amrut_B_Nargund(Mech).pdf',
+    fileName: 'mechanical.pdf',
+    iconType: 'wrench',
+    updatedDate: 'Oct 2024',
+  },
+]
     iconType: 'wrench',
   },
 ]
