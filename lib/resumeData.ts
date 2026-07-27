@@ -8,7 +8,6 @@ export interface Resume {
   fileName: string
   iconType: IconType
   featured?: boolean
-  updatedDate?: string
 }
 
 export const resumeData: Resume[] = [
@@ -21,7 +20,6 @@ export const resumeData: Resume[] = [
     fileName: 'ai-ml.pdf',
     iconType: 'brain',
     featured: true,
-    updatedDate: 'Dec 2024',
   },
   {
     id: 'ece',
@@ -31,7 +29,6 @@ export const resumeData: Resume[] = [
     tags: ['STM32', 'Embedded C', 'PCB', 'Electronics', 'Microcontrollers'],
     fileName: 'ece.pdf',
     iconType: 'cpu',
-    updatedDate: 'Nov 2024',
   },
   {
     id: 'robotics',
@@ -41,7 +38,6 @@ export const resumeData: Resume[] = [
     tags: ['ROS2', 'SLAM', 'LiDAR', 'Robotics', 'Sensor Fusion'],
     fileName: 'robotics.pdf',
     iconType: 'zap',
-    updatedDate: 'Dec 2024',
   },
   {
     id: 'data-analyst',
@@ -51,7 +47,6 @@ export const resumeData: Resume[] = [
     tags: ['SQL', 'Power BI', 'Python', 'Excel', 'Analytics'],
     fileName: 'data-analyst.pdf',
     iconType: 'barchart',
-    updatedDate: 'Nov 2024',
   },
   {
     id: 'product-manager',
@@ -61,7 +56,6 @@ export const resumeData: Resume[] = [
     tags: ['Product', 'Strategy', 'Analytics', 'Agile', 'Research'],
     fileName: 'product-manager.pdf',
     iconType: 'target',
-    updatedDate: 'Nov 2024',
   },
   {
     id: 'ui-ux',
@@ -71,7 +65,6 @@ export const resumeData: Resume[] = [
     tags: ['UI', 'UX', 'Figma', 'Design', 'Prototype'],
     fileName: 'ui-ux.pdf',
     iconType: 'palette',
-    updatedDate: 'Oct 2024',
   },
   {
     id: 'mechanical',
@@ -81,6 +74,5 @@ export const resumeData: Resume[] = [
     tags: ['CAD', 'SolidWorks', 'Fusion 360', 'Mechanical', 'Design'],
     fileName: 'mechanical.pdf',
     iconType: 'wrench',
-    updatedDate: 'Oct 2024',
   },
 ]

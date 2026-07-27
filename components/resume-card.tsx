@@ -93,13 +93,6 @@ export default function ResumeCard({
           ))}
         </div>
 
-        {/* Updated Date */}
-        {resume.updatedDate && (
-          <p className="text-xs text-gray-500 mb-4">
-            Last updated: {resume.updatedDate}
-          </p>
-        )}
-
         {/* Download Button */}
         <motion.button
           onClick={handleDownload}
