@@ -84,6 +84,3 @@ export const resumeData: Resume[] = [
     updatedDate: 'Oct 2024',
   },
 ]
-    iconType: 'wrench',
-  },
-]
