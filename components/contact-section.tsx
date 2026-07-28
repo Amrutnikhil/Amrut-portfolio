@@ -104,10 +104,11 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full bg-[#00D4FF] text-black font-semibold rounded-lg px-8 py-3 hover:bg-[#00D4FF]/90 transition-all duration-200 flex items-center justify-center gap-2 mt-4 cursor-pointer"          >
+            className="w-full bg-[#00D4FF] text-black font-semibold rounded-lg px-8 py-3 hover:bg-[#00D4FF]/90 transition-all duration-200 flex items-center justify-center gap-2 mt-4 cursor-pointer"
+          >
             <Download size={18} />
             Download Resume
-          </motion.a>
+          </motion.button>
         </motion.div>
       </div>
     </section>
